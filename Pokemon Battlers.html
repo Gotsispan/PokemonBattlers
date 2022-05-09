@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="interface.css">
+</head>
+
+
+<body>
+
+
+
+<div class = "container">
+    <div class = "leftside">
+        <div class = "side1">
+            <div class = "stats1">   
+                <p id = "Pokemon1stats"></p>
+            </div>
+
+            <div class = "field1">
+                <p id = fieldstats1></p>
+            </div>
+
+            <div class = "img1">
+                <img  onmouseover="hide(1,'no')"  onmouseout ="hide(1,'yes')" id = "Pokemon1sprite" />
+                <div class = "hpbar1">
+                    <div class = "nick1">
+                        <p id = "nick1">AAAA</p>
+                    </div>
+                    <div class = "rect">
+                        <div id = "rect11" class = "rects1"></div>
+                        <div id = "rect12" class = "rects2"></div>
+                    </div>
+                    <div class = "hpperc1">
+                        <p id = "hpperc1">%</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "side2">
+            
+            <div class = "img2">
+                <img onmouseover="hide(2,'no')"  onmouseout ="hide(2,'yes')" id = "Pokemon2sprite" />
+                <div class = "hpbar2">
+                    <div class = "nick2">
+                        <p id = "nick2">AAAA</p>
+                    </div>
+                    <div class = "rect">
+                        <div id = "rect21" class = "rects1"></div>
+                        <div id = "rect22" class = "rects2"></div>
+                    </div>
+                    <div class = "hpperc2">
+                        <p id = "hpperc2">%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "stats2">   
+            <p id = "Pokemon2stats"></p> 
+        </div>
+
+        <div class = "field2">
+            <p id = fieldstats2>aa</p>
+        </div>
+
+
+        
+    </div>
+
+    <div class = "bottomscreen">
+        
+        <div class = "switchchoices">
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch1image" ></button>
+                    <button id = "switch1button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch1stats" ></p>
+                </div>
+            </div>
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch2image" ></button>
+                    <button id = "switch2button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch2stats" ></p>
+                </div>
+            </div>
+
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch3image" ></button>
+                    <button id = "switch3button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch3stats" ></p>
+                </div>
+            </div>
+
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch4image" ></button>
+                    <button id = "switch4button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch4stats" ></p>
+                </div>
+            </div>
+
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch5image" ></button>
+                    <button id = "switch5button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch5stats" ></p>
+                </div>
+            </div>
+
+
+            <div class = "switcher">
+                <div class = "switchersup">
+                    <img id = "switch6image" ></button>
+                    <button id = "switch6button" ></button>
+                </div>
+            
+
+                <div class = "switcherdown">
+                    <p id= "switch6stats" ></p>
+                </div>
+            </div>
+
+        
+
+        </div>
+
+        <div class = "movechoices">
+            <div class = "movebutton">
+                <button id = "move1button" ></button>
+            </div>
+
+            <div class = "movebutton">
+                <button id = "move2button" ></button>
+            </div>
+
+            <div class = "movebutton">
+                <button id = "move3button" ></button>
+            </div>
+
+            <div class = "movebutton">
+                <button id = "move4button" ></button>
+            </div>
+   
+        </div>
+    
+    </div>
+
+    <div class = "startbutton">
+        <button onclick = "battlefull([0,1])"></button>
+    </div>
+
+   
+    <div class = "rightside">
+
+        <p id = "chatlog" class = "chatlog">Welcome to Pokemon Battlers! <br> <br> Please press the button in the middle of the field to start battling</p>
+        
+        <div class = "chat">
+            <input type="text" id="chatinput" placeholder="Type something here"><br>   
+        </div>
+    
+    </div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+<script>
+    function arrayToTable(tableData) {
+        var table = $('<table id = "myTable"></table>');
+        $(tableData).each(function (i, rowData) {
+            var row = $('<tr></tr>');
+            $(rowData).each(function (j, cellData) {
+                row.append($('<td>'+cellData+'</td>'));
+            });
+            table.append(row);
+        });
+        return table;
+    }
+
+    $.ajax({
+        type: "GET",
+        url: "https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv",
+        success: function (data) {
+            $('body').append(arrayToTable(Papa.parse(data).data));
+        }
+    });
+</script>
+
+<script src = "findbasestats.js"></script>
+
+<script src = 'battleother.js'></script>
+
+<script src = "basics.js"></script>
+
+<script src = "moves.js"></script>
+
+<script src = "calculatedamage.js"></script>
+
+<script src = "pre_after_turn.js"></script>
+
+<script src = "battle.js"></script>
+
+<script src = "interface.js"></script>
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,237 @@
+html { 
+    background-color: #2f2f2f;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.stats2 {
+    color: #7fcdd6;
+    position: absolute;
+    left: 1200px;
+    top: 40px;
+}
+
+.stats1 {
+    color: #7fcdd6;
+    position: absolute;
+    top: 470px;
+    left: 420px;
+}
+
+.field1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+.bottomscreen {
+    display: flex;
+}
+
+.switcher {
+    color: gold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.switchersup {
+    display: flex;
+    flex-direction: column;
+}
+
+.switchchoices {
+    margin-bottom: -4px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 5vw);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    position: absolute;
+    top: 770px;
+    left: 600px;
+    width: 800px;
+    font-size:13px;
+}
+
+.switchchoices img{
+    height:60px;
+    width: 60px;
+}
+
+.startbutton button{
+    position: absolute;
+    color:#7fcdd6;
+    top: 333px;
+    left: 734px;
+    width:145px;
+    height:58px;
+    border-radius: 50%;
+    outline-style: none;
+    outline-color: #7fcdd6;
+}
+
+.movechoices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 5vw);
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+    position: absolute;
+    height: 100px;
+    top: 800px;
+    left: 25px;
+}
+
+.movebutton button{
+    position: relative;
+    width:250px;
+    height:50px;
+    border-radius: 99px;
+    outline-style: none;
+}
+
+.rect{
+    display:flex;
+    flex-direction: row;
+}
+
+.rects1 {
+    height: 30px;
+    width: 200px;
+    background-color: lime
+}
+
+.rects2 {
+    line-height: 0.75;
+    width: 0px;
+    background-color: red
+}
+
+.nick2 {
+    height: 30px;
+}
+
+.nick1 {
+    height: 30px;
+}
+
+.side1 {
+    height: 700px;
+    width: 100%;
+}
+
+.hpbar1 {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0px;
+}
+
+.hpbar2 {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0px;
+}
+
+.hpperc2 {
+    height: 30px;
+}
+
+.hpperc1 {
+    height: 30px;
+    transform: scaleX(-1);
+}
+
+div.stats2 {
+    margin:4px, 4px;
+    padding:4px;
+    width: 500px;
+}
+
+td {
+    display: none;
+}
+
+.leftside {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-image: url("https://i.ibb.co/tCFYvXw/21700.png");
+    width:75%;
+    height:760px;
+  }
+
+
+.img2{
+    position: absolute;
+    left: 1000px;
+    top: 40px;
+}
+
+.img1{
+    transform: scaleX(-1);
+    position: absolute;
+    left: 220px;
+    top: 470px;
+}
+
+.rightside {
+    position: absolute;
+    right: 5px;
+    outline: 5px solid gold;
+    top: 10px;
+    vertical-align:top;
+    overflow-y: scroll;
+    width:24%;
+    height:910px;
+}
+
+.chatlog {
+    position: absolute;
+    color: gold;
+    font-size: 15px;
+    left: 25px;
+    right: 20px;
+    width: 350px
+}
+
+.chat {
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    width: 300px
+}
+
+
+.side1 {
+    display: flex;
+}
+
+.side2 {
+    display: flex;
+}
+
+.img2 img{
+    
+    
+    height: 200px;
+    width: 200px;
+}
+
+.img1 img{
+    height: 200px;
+    width: 200px;
+}
+
+
+
